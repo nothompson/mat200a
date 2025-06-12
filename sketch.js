@@ -155,9 +155,9 @@ function setup() {
   myHeight = windowHeight -  200;
   myY = 50;
 
-  console.log("window: " + windowWidth, windowHeight);
+  // console.log("window: " + windowWidth, windowHeight);
   
-  console.log("play: " + (myWidth + myX), myHeight + myY);
+  // console.log("play: " + (myWidth + myX), myHeight + myY);
 
   textAlign(CENTER);
 
@@ -399,7 +399,7 @@ function keyPressed() {
       newLevel.generateLevel(COLOR);
       blobs[0].canExit = false;
       
-      console.log("R pressed. canExit:", blobs[0].canExit);
+      // console.log("R pressed. canExit:", blobs[0].canExit);
   }
 
   if(pots.length > 0){

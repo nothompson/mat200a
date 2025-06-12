@@ -106,7 +106,7 @@ graceState(){
       this.entered = false; 
       this.exited = false;
       this.gracePeriodTimer = 120 + this.graceBoost; // reset grace period timer
-      console.log("Grace period ended");
+      // console.log("Grace period ended");
     }
   }
 }
@@ -246,7 +246,7 @@ genDisplay(positions){
         
         for (let i = 0; i < this.num; i++) {
           if (!positions[i]){
-            console.log("Position not found for index: " + i);
+            // console.log("Position not found for index: " + i);
              continue;
           }
           let p = positions[i];
@@ -338,7 +338,7 @@ if(!this.gracePeriod){
     if(g.pos.dist(this.points[this.num].position) < 15 && !this.hurt){
       this.hurt = true;
       this.HP -= 25;
-      console.log(`Blob hurt! Current HP: ${this.HP}`);
+      // console.log(`Blob hurt! Current HP: ${this.HP}`);
     }
   }
     if (this.hurt) {
@@ -377,11 +377,6 @@ exit(door){
         stroke(0);
         strokeWeight(2);
         text("Exit?", door.x + door.w/2, door.y - 25);
-
-console.log("Checking exit proximity...");
-console.log("Blob pos:", this.points[this.num].position.x, this.points[this.num].position.y);
-console.log("Door pos:", door.x, door.y, door.w, door.h);
-console.log("Can exit:", this.canExit);
   }
   else{
     this.canExit = false;

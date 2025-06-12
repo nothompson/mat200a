@@ -40,5 +40,4 @@ class segment{
    // line(0,0,this.distance,0);
    pop();
  }
-  
 }

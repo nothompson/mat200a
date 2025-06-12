@@ -345,7 +345,7 @@ function doorPlacement(validGaps, xMin, xMax) {
   let sideGaps = validGaps.filter(v => v.x >= xMin && v.x <= xMax);
   if (sideGaps.length > 0) {
     let chosen = random(sideGaps);
-    console.log("door at:", chosen.x, chosen.y);
+    // console.log("door at:", chosen.x, chosen.y);
 
     let index = validGaps.indexOf(chosen);
     if (index !== -1) validGaps.splice(index, 1);
@@ -421,8 +421,8 @@ class level{
     scaledW = ((myWidth + myX) * 0.025) + gap + 10;
     scaledH = ((myHeight + myY) * 0.025) + gap + 10;
 
-    console.log("width: " + scaledW, "height: " + scaledH);
-    console.log("gap: " + gap);
+    // console.log("width: " + scaledW, "height: " + scaledH);
+    // console.log("gap: " + gap);
 
     let randLow = 0.25;
     let randHigh = 2.0;
@@ -465,8 +465,7 @@ class level{
         this.doors.push(new door(solo.x, solo.y, clearWidth, clearHeight, true));
       }
       else if(!leftDoor && !rightDoor) {
-        console.warn("No valid doors found. Retrying level generation...");
-        this.generateLevel(colorHandler); // careful to avoid infinite loops!
+        this.generateLevel(colorHandler); 
         return;
       }
 
@@ -519,7 +518,7 @@ class level{
     hasEntered(blob){
       if(blob.entered){
           blob.gracePeriod = true;
-          console.log("here")
+          // console.log("here")
         }
     }
 
@@ -636,11 +635,11 @@ function bgString(value){
     }
     //pot
     else if (value >= 0.25 && value <= 0.5){
-      return "Cursed Fleshscape"
+      return "Cursed Hills"
     }
     //manic
     else if (value >= 0.5 && value <= 0.75){
-      return "Fungal Sun Palace"
+      return "Fungal Sunspot"
     }
     //flowers
     else if (value >= 0.75 && value <= 1.0){
