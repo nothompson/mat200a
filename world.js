@@ -484,7 +484,7 @@ class level{
         gloobHigh = 8;
         potChance = 0.95;
       }
-       else if(bgString(this.bg) == "Cursed Fleshscape"){
+       else if(bgString(this.bg) == "Cursed Hills"){
         initThresholdHealth = 0.5;
         secondHealth = 0.9;
         thirdHealth = 2;
@@ -492,7 +492,7 @@ class level{
         gloobHigh = 22;
         potChance = 0.66;
       }
-       else if(bgString(this.bg) == "Fungal Sun Palace"){
+       else if(bgString(this.bg) == "Fungal Sunspot"){
         initThresholdHealth = 0.25;
         secondHealth = 0.6;
         thirdHealth = 0.9;
